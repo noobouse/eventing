@@ -23,7 +23,7 @@ namespace FNE.Eventing
         {
             // TODO: load server settings from configuration
 
-            return WebApplication.Start<Server>(url);
+            return WebApplication.Start<Configurator>(url);
         }
 
         //
