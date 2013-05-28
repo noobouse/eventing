@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution items", "solution 
 		Readme.md = Readme.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FNE.Eventing.Configuration", "FNE.Eventing.Configuration\FNE.Eventing.Configuration.csproj", "{F5C5032F-FFF1-4794-B288-281D8F428767}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,10 @@ Global
 		{45A16C9E-117D-4D83-ABF6-A03DF7EA5BE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45A16C9E-117D-4D83-ABF6-A03DF7EA5BE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45A16C9E-117D-4D83-ABF6-A03DF7EA5BE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5C5032F-FFF1-4794-B288-281D8F428767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5C5032F-FFF1-4794-B288-281D8F428767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5C5032F-FFF1-4794-B288-281D8F428767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5C5032F-FFF1-4794-B288-281D8F428767}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +47,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{71AC82E7-6A1A-49FD-BC73-74CC552CFBE4} = {10729337-D7AC-4340-B941-68FED5307EBB}
 		{61C437E9-E68C-4032-8FEC-FB22A9226E98} = {10729337-D7AC-4340-B941-68FED5307EBB}
+		{F5C5032F-FFF1-4794-B288-281D8F428767} = {10729337-D7AC-4340-B941-68FED5307EBB}
 		{45A16C9E-117D-4D83-ABF6-A03DF7EA5BE1} = {7E051CA9-F0B7-4A32-B181-0B7B36168BBA}
 	EndGlobalSection
 EndGlobal
