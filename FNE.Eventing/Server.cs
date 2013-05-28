@@ -9,8 +9,16 @@ using Owin;
 
 namespace FNE.Eventing
 {
+    /// <summary>
+    /// Manages the lifetime of the <see cref="EventBroker"/> service.
+    /// </summary>
     public class Server
     {
+        /// <summary>
+        /// Starts the server and the <see cref="EventBroker"/> service.
+        /// </summary>
+        /// <param name="url">The endpoint of the service. If a value is not provided, it will be read from a configuration file.</param>
+        /// <returns></returns>
         public static IDisposable Start(string url = "")
         {
             // TODO: load server settings from configuration
