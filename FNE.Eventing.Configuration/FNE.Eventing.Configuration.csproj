@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventBrokerConfigurationElement.cs" />
     <Compile Include="EventingConfigurationSection.cs" />
     <Compile Include="EventingServerConfigurationElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
