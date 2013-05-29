@@ -59,6 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EventBroker.cs" />
+    <Compile Include="Logging\Enums.cs" />
+    <Compile Include="Logging\LoggingProviderExtensions.cs" />
+    <Compile Include="Logging\ILoggingProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Server.cs" />
   </ItemGroup>
