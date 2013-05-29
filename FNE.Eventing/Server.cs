@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,19 @@ namespace FNE.Eventing
     /// </summary>
     public class Server
     {
+        //
+        // Fields
+
+        private static Configuration.EventingConfigurationSection Configuration;
+
+        //
+        // Constructors
+
+        static Server()
+        {
+            Configuration = ConfigurationManager.GetSection("eventing") as Configuration.EventingConfigurationSection;
+        }
+
         /// <summary>
         /// Starts the server and the <see cref="EventBroker"/> service.
         /// </summary>
@@ -21,9 +35,7 @@ namespace FNE.Eventing
         /// <returns></returns>
         public static IDisposable Start(string url = "")
         {
-            // TODO: load server settings from configuration
-
-            return WebApplication.Start<Configurator>(url);
+            return WebApplication.Start<Configurator>(Configuration.Server.Url ?? url);
         }
 
         //
@@ -37,9 +49,9 @@ namespace FNE.Eventing
 
                 builder.MapHubs(new HubConfiguration
                 {
-                    EnableCrossDomain = true,
-                    EnableDetailedErrors = true,
-                    EnableJavaScriptProxies = true
+                    EnableCrossDomain = Server.Configuration.Server.EventBroker.EnableCrossDomain,
+                    EnableDetailedErrors = Server.Configuration.Server.EventBroker.EnableDetailedErrors,
+                    EnableJavaScriptProxies = Server.Configuration.Server.EventBroker.EnableJavaScriptProxies
                 });
             }
         }
