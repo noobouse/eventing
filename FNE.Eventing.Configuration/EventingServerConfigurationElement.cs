@@ -38,5 +38,20 @@ namespace FNE.Eventing.Configuration
         }
 
         #endregion
+
+        #region EventBroker
+
+        [ConfigurationProperty("eventBroker", IsRequired = false)]
+        public EventBrokerConfigurationElement EventBroker
+        {
+            get { return (EventBrokerConfigurationElement)base["eventBroker"]; }
+            set
+            {
+                if (!base["eventBroker"].Equals(value))
+                    base["eventBroker"] = value;
+            }
+        }
+
+        #endregion
     }
 }
