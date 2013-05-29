@@ -85,6 +85,9 @@ namespace FNE.Eventing
 
         #region OnConnected
         
+        /// <summary>
+        /// Called when a connection conects to this hub instance.
+        /// </summary>
         public override Task OnConnected()
         {
             try
@@ -103,6 +106,9 @@ namespace FNE.Eventing
 
         #region OnDisconnected
         
+        /// <summary>
+        /// Called when a connection disconnects from this hub instance.
+        /// </summary>
         public override Task OnDisconnected()
         {
             try
@@ -121,6 +127,9 @@ namespace FNE.Eventing
 
         #region OnReconnected
         
+        /// <summary>
+        /// Called when a connection reconnects to this hub instance.
+        /// </summary>
         public override Task OnReconnected()
         {
             try
