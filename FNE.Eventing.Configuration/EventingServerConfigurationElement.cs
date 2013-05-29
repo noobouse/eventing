@@ -9,6 +9,8 @@ namespace FNE.Eventing.Configuration
 {
     public class EventingServerConfigurationElement : ConfigurationElement
     {
+        #region Url
+        
         [ConfigurationProperty("url", IsRequired = true)]
         public string Url
         {
@@ -20,6 +22,10 @@ namespace FNE.Eventing.Configuration
             }
         }
 
+        #endregion
+
+        #region UseSignalR
+        
         [ConfigurationProperty("useSignalR", DefaultValue = true, IsRequired = false)]
         public bool UseSignalR
         {
@@ -30,5 +36,7 @@ namespace FNE.Eventing.Configuration
                     base["useSignalR"] = value;
             }
         }
+
+        #endregion
     }
 }
