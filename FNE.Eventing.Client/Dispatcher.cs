@@ -21,6 +21,9 @@ namespace FNE.Eventing.Client
 
         #region Dispatcher
 
+        /// <summary>
+        /// Creates a new instance of the <see cref="Dispatcher"/> class.
+        /// </summary>
         protected Dispatcher()
             : base()
         {

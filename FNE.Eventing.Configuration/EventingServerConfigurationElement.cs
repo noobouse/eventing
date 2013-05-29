@@ -7,10 +7,16 @@ using System.Threading.Tasks;
 
 namespace FNE.Eventing.Configuration
 {
+    /// <summary>
+    /// Represents configuration settings for the eventing server.
+    /// </summary>
     public class EventingServerConfigurationElement : ConfigurationElement
     {
         #region Url
         
+        /// <summary>
+        /// Gets or sets the endpoint of the eventing server.
+        /// </summary>
         [ConfigurationProperty("url", IsRequired = true)]
         public string Url
         {
@@ -26,6 +32,9 @@ namespace FNE.Eventing.Configuration
 
         #region UseSignalR
         
+        /// <summary>
+        /// Gets or sets a value indicating whether SignalR should be used for communication.
+        /// </summary>
         [ConfigurationProperty("useSignalR", DefaultValue = true, IsRequired = false)]
         public bool UseSignalR
         {
@@ -41,6 +50,9 @@ namespace FNE.Eventing.Configuration
 
         #region EventBroker
 
+        /// <summary>
+        /// Gets or sets the event broker configuration settings.
+        /// </summary>
         [ConfigurationProperty("eventBroker", IsRequired = false)]
         public EventBrokerConfigurationElement EventBroker
         {

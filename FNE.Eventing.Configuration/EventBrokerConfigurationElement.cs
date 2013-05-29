@@ -7,10 +7,16 @@ using System.Threading.Tasks;
 
 namespace FNE.Eventing.Configuration
 {
+    /// <summary>
+    /// Represents configuration settings for the event broker in an eventing server project.
+    /// </summary>
     public class EventBrokerConfigurationElement : ConfigurationElement
     {
         #region EnableCrossDomain
 
+        /// <summary>
+        /// Gets or sets a value indicating whether events can be dispatched cross domain.
+        /// </summary>
         [ConfigurationProperty("enableCrossDomain", DefaultValue = true, IsRequired = false)]
         public bool EnableCrossDomain
         {
@@ -26,6 +32,9 @@ namespace FNE.Eventing.Configuration
 
         #region EnableDetailedErrors
 
+        /// <summary>
+        /// Gets or sets a value indicating whether detailed errors should be included in event messages.
+        /// </summary>
         [ConfigurationProperty("enableDetailedErrors", DefaultValue = false, IsRequired = false)]
         public bool EnableDetailedErrors
         {
@@ -41,6 +50,9 @@ namespace FNE.Eventing.Configuration
 
         #region EnableJavaScriptProxies
 
+        /// <summary>
+        /// Gets or sets a value indicating whether JavaScript proxies should be created for the event broker.
+        /// </summary>
         [ConfigurationProperty("enableJavaScriptProxies", DefaultValue = true, IsRequired = false)]
         public bool EnableJavaScriptProxies
         {
