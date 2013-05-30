@@ -31,7 +31,7 @@ namespace FNE.Eventing.Client
             : base()
         {
             connection = new HubConnection(url);
-            proxy = connection.CreateHubProxy("dispatcher");
+            proxy = connection.CreateHubProxy("eventBroker");
             handlers = new ConcurrentDictionary<string, DelegateEventHandler>();
 
             proxy.On<string, JContainer>("dispatch", DelegateDispatchedEvent);
