@@ -47,6 +47,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FNE.Eventing.Client\FNE.Eventing.Client.csproj">
+      <Project>{71ac82e7-6a1a-49fd-bc73-74cc552cfbe4}</Project>
+      <Name>FNE.Eventing.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FNE.Eventing.Configuration\FNE.Eventing.Configuration.csproj">
+      <Project>{f5c5032f-fff1-4794-b288-281d8f428767}</Project>
+      <Name>FNE.Eventing.Configuration</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
