@@ -27,7 +27,7 @@ namespace FNE.Eventing.Samples.ConsoleServer
             var builder = new Autofac.ContainerBuilder();
 
             builder.RegisterHubs(System.Reflection.Assembly.GetAssembly(typeof(FNE.Eventing.EventBroker)));
-            builder.RegisterType<NLogLoggingProvider>().As<FNE.Eventing.Logging.ILoggingProvider>().SingleInstance();
+            builder.RegisterType<NLogLoggingProvider>().AsImplementedInterfaces().InstancePerDependency();
 
             Microsoft.AspNet.SignalR.GlobalHost.DependencyResolver = new Autofac.Integration.SignalR.AutofacDependencyResolver(builder.Build());
         }
