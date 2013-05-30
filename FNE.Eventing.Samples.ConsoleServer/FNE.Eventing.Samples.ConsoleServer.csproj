@@ -92,6 +92,10 @@
       <Project>{f5c5032f-fff1-4794-b288-281d8f428767}</Project>
       <Name>FNE.Eventing.Configuration</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FNE.Eventing.Logging\FNE.Eventing.Logging.csproj">
+      <Project>{092762fa-18fb-439c-bea3-9e830318f17e}</Project>
+      <Name>FNE.Eventing.Logging</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FNE.Eventing\FNE.Eventing.csproj">
       <Project>{61c437e9-e68c-4032-8fec-fb22a9226e98}</Project>
       <Name>FNE.Eventing</Name>
