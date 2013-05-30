@@ -12,6 +12,12 @@ namespace FNE.Eventing.Logging
     public interface ILoggingProvider
     {
         /// <summary>
+        /// Logs an exception as <see cref="LCC.Eventing.Logging.Severity.Error"/>.
+        /// </summary>
+        /// <param name="exception">The <see cref="Exception"/> to log.</param>
+        void Log(Exception exception);
+
+        /// <summary>
         /// Logs a message.
         /// </summary>
         /// <param name="severity">The <see cref="LCC.Eventing.Logging.Severity"/> of the message.</param>

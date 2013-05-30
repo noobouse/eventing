@@ -23,6 +23,11 @@ namespace FNE.Eventing.Samples.ConsoleServer
             this.logger = NLog.LogManager.GetLogger(Guid.NewGuid().ToString());
         }
 
+        public void Log(Exception exception)
+        {
+            this.logger.Error<Exception>(exception);
+        }
+
         public void Log(Severity severity, string message, params object[] args)
         {
             switch (severity)
