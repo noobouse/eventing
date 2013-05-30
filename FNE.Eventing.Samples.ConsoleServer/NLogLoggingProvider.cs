@@ -17,7 +17,7 @@ namespace FNE.Eventing.Samples.ConsoleServer
         //
         // Constructors
 
-        internal NLogLoggingProvider()
+        public NLogLoggingProvider()
             : base()
         {
             this.logger = NLog.LogManager.GetLogger("NLogLoggingProvider");
