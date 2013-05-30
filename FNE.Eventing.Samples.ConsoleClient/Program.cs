@@ -10,6 +10,12 @@ namespace FNE.Eventing.Samples.ConsoleClient
     {
         static void Main(string[] args)
         {
+            var dispatcher = FNE.Eventing.Client.Dispatcher.Current;
+
+            dispatcher.On<string>("dispatcher:test", c => Console.WriteLine(c));
+
+            Console.WriteLine("Client started...");
+            Console.ReadLine();
         }
     }
 }
