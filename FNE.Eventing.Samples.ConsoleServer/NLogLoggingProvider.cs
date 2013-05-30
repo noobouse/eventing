@@ -20,7 +20,7 @@ namespace FNE.Eventing.Samples.ConsoleServer
         public NLogLoggingProvider()
             : base()
         {
-            this.logger = NLog.LogManager.GetLogger("NLogLoggingProvider");
+            this.logger = NLog.LogManager.GetLogger(Guid.NewGuid().ToString());
         }
 
         public void Log(Severity severity, string message, params object[] args)
