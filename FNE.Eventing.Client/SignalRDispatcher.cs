@@ -22,7 +22,7 @@ namespace FNE.Eventing.Client
         //
         // Constructors
 
-        internal SignalRDispatcher(Configuration.EventingServerConfigurationElement configuration)
+        internal SignalRDispatcher(Configuration.EventDispatcherConfigurationElement configuration)
             : this(configuration.Url)
         {
         }

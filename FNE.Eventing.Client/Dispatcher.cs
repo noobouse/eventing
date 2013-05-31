@@ -28,7 +28,7 @@ namespace FNE.Eventing.Client
             if (configuration == null)
                 throw new InvalidOperationException("The 'eventing' configuration section is missing or cannot be loaded.");
 
-            current = new SignalRDispatcher(configuration.Server);
+            current = new SignalRDispatcher(configuration.Dispatcher);
         }
 
         /// <summary>
