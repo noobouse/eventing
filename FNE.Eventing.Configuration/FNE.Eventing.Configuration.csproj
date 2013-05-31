@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EventBrokerConfigurationElement.cs" />
+    <Compile Include="EventDispatcherConfigurationElement.cs" />
     <Compile Include="EventingConfigurationSection.cs" />
     <Compile Include="EventingServerConfigurationElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
