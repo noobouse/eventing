@@ -21,6 +21,16 @@ namespace FNE.Eventing.Client
 
         #region Dispatcher
 
+        static Dispatcher()
+        {
+            var configuration = System.Configuration.ConfigurationManager.GetSection("eventing") as Configuration.EventingConfigurationSection;
+
+            if (configuration == null)
+                throw new InvalidOperationException("The 'eventing' configuration section is missing or cannot be loaded.");
+
+            current = new SignalRDispatcher(configuration.Server);
+        }
+
         /// <summary>
         /// Creates a new instance of the <see cref="Dispatcher"/> class.
         /// </summary>
@@ -41,20 +51,7 @@ namespace FNE.Eventing.Client
         /// </summary>
         public static IDispatcher Current
         {
-            get
-            {
-                if (current == null)
-                {
-                    var configuration = System.Configuration.ConfigurationManager.GetSection("eventing") as Configuration.EventingConfigurationSection;
-
-                    if (configuration == null)
-                        throw new InvalidOperationException("The 'eventing' configuration section is missing or cannot be loaded.");
-
-                    current = new SignalRDispatcher(configuration.Server);
-                }
-
-                return current;
-            }
+            get { return current; }
         }
 
         #endregion
