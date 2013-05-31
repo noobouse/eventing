@@ -18,7 +18,7 @@ namespace FNE.Eventing.Configuration
         /// <summary>
         /// Gets or sets the server configuration.
         /// </summary>
-        [ConfigurationProperty("server", IsRequired = true)]
+        [ConfigurationProperty("server", IsRequired = false)]
         public EventingServerConfigurationElement Server
         {
             get { return (EventingServerConfigurationElement)base["server"]; }
@@ -26,6 +26,24 @@ namespace FNE.Eventing.Configuration
             {
                 if (!base["server"].Equals(value))
                     base["server"] = value;
+            }
+        }
+
+        #endregion
+
+        #region Dispatcher
+
+        /// <summary>
+        /// Gets or sets the dispatcher configuration.
+        /// </summary>
+        [ConfigurationProperty("dispatcher", IsRequired = false)]
+        public EventDispatcherConfigurationElement Dispatcher
+        {
+            get { return (EventDispatcherConfigurationElement)base["dispatcher"]; }
+            set
+            {
+                if (!base["dispatcher"].Equals(value))
+                    base["dispatcher"] = value;
             }
         }
 
